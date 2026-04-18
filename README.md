@@ -54,12 +54,23 @@ Reports include:
 
 ---
 
+## 📊 Data Source
+
+The project is based on official Eurostat demographic data.
+
+Main dataset used:
+- `lfst_hhacwnc__custom_19582684_linear_2_0.csv`
+
+This dataset contains structured statistical information about the adult population in EU countries and serves as the foundation for the entire BI pipeline.
+
+---
+
 ## 🧰 Technologies Used
 
 - SQL Server Integration Services (SSIS)
 - SQL Server (Data Warehouse)
-- OLAP modeling
-- Power BI
+- OLAP modeling (SSAS)
+- Power BI (SSRS reporting layer)
 - DAX (Data Analysis Expressions)
 - Eurostat datasets
 
@@ -79,9 +90,9 @@ Reports include:
 
 ```
 ├── Projekt_adults_SAW_SSIS.zip   → SSIS ETL packages
-├── Projekt_adults_SAW_SSAS.zip          → OLAP / Data warehouse model
-├── Projekt_adults_SAW_SSRS.zip       → Power BI dashboards
-├── kraje.xlsx
+├── Projekt_adults_SAW_SSAS.zip   → OLAP / Data warehouse model
+├── Projekt_adults_SAW_SSRS.zip   → Power BI dashboards
+├── lfst_hhacwnc__custom_19582684_linear_2_0.csv → Eurostat dataset
 └── README.md
 ```
 
@@ -109,9 +120,9 @@ git clone https://github.com/your-username/your-repo.git
 - `Projekt_adults_SAW_SSRS.zip` → Power BI dashboards
 
 3. Run components in order:
-- SSIS ETL process
+- Execute SSIS ETL process
 - Load data into warehouse / cube
-- Open Power BI report (`.pbix` if included inside ZIP)
+- Open Power BI report
 
 ---
 
@@ -128,9 +139,10 @@ git clone https://github.com/your-username/your-repo.git
 
 ## 📊 Business Value
 
-This project demonstrates how raw demographic data can be transformed into meaningful business insights through:
+This project demonstrates how raw Eurostat demographic data can be transformed into meaningful insights through:
 - structured ETL processes
-- interactive dashboards
+- analytical data modeling
+- interactive BI dashboards
 
 ---
 
